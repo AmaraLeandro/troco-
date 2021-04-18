@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de troco</title>
+</head>
+<body>
+    <h1>
+        calculando troco
+    </h1>
+    <form>
+        <input type="button" value="comprar produto" onclick="botao()">
+    </form>
+    <script>
+
+        function  botao(){
+            
+            var comprar = window.prompt ('Que produto você está comprando?')
+            var valor =Number(window.prompt (`quanto custa ${comprar} que você esta comprando?`).replace(",","."))
+            var reais =Number( window.prompt (`qual foi o valor que voce deu para pagar ${comprar} ?`).replace(",","."))
+            var resultado = reais - valor
+            window.alert(`você comprou ${comprar} que custou R$ ${valor}\n\Deu R$ ${reais} em dinheiro e vai receber R$ ${resultado} de troco \n\Volte sempre`)
+        }
+    </script>
+</body>
+</html>
